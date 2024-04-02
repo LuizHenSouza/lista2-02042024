@@ -23,3 +23,18 @@ def verifica_par_ou_impar():
         verifica_par_ou_impar()
 
 verifica_par_ou_impar()
+
+def verifica_aprovacao():
+    try:
+        nota = float(input("Informe a nota do aluno:"))
+        if(nota >= 7):
+            print("Aluno aprovado!")
+        elif(nota <= 6):
+            print("Aluno reprovado!")
+        else:
+            print("Aluno em recuperação")
+    except:
+        print("Valor inserido é invalido")
+        verifica_aprovacao()
+
+verifica_aprovacao()
